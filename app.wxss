@@ -1,0 +1,19 @@
+page,view,text,swiper,swiper-item,image,navigator{
+    padding: 0;    
+    margin: 0;
+    box-sizing: border-box;
+}
+.imgs{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+page{
+    /* 定义主题颜色 */
+    --Color: #F8554D;
+    /* 定义统一字体大小 */
+    font-size: 28rpx;
+}
+.panding30{
+    padding: 0 30rpx;
+}

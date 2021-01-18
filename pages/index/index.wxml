@@ -1,0 +1,25 @@
+<view class="index">
+    <!-- 搜索框 -->
+    <searchInput></searchInput>
+    <!-- 轮播图 -->
+    <swiper class="lb" indicator-dots indicator-active-color="#fff" autoplay interval="3000">
+		  <navigator wx:for="{{swiperList}}" wx:key="goods_id"  class="jump"  url="{{item.navigator_url}}" open-type="navigate">
+			  <swiper-item  ><image mode="widthFix" class="imgs"  src="{{item.image_src}}"></image></swiper-item>
+		  </navigator>
+    </swiper>
+    <view class="nav">
+		<navigator wx:for="{{catesList}}" wx:key="index" class="nav_navigator" url="{{item.navigator_url}}" >
+			<image class="imgs" mode="widthFix" src="{{item.image_src}}"></image>
+		</navigator>
+    </view>
+	<view class="floor " wx:for="{{FloorList}}" wx:for-item="items" wx:for-index="indexs" wx:key="indexs" > 
+		<view class="floor_tit">
+			<image class="imgs"  mode="widthFix"   src="{{items.floor_title.image_src}}" />
+		</view>
+		<view class="floor_item">
+			<navigator class="content" wx:for="{{items.product_list}}" url="{{item.navigator_url}}"  wx:key="index">
+				<image class="imgs nav_img" src="{{item.image_src}}" mode="{{index===0?'widthFix':'scaleToFill'}}" />
+			</navigator>
+		</view>
+	</view>
+</view>
