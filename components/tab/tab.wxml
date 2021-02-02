@@ -1,0 +1,18 @@
+<!--components/tab/tab.wxml-->
+<view class="tab">
+    <view class="tab_tit">
+        <view  wx:for="{{list}}" wx:key="id" bindtap="clcikList" data-id="{{item.id}}" class="tab_tit_item {{item.id == setid ? 'active':' '}}"  >
+            {{item.name}}
+        </view>
+    </view>
+    <view class="tab_content">
+        <navigator class="tab_content_item" url="../../pages/goods_detail/goods_detail?goods_id={{item.goods_id}}"  wx:for="{{goodslist}}" wx:key="goods_id">
+            <image  class="goodsImg" mode="widthFix" src="{{item.goods_big_logo}}"></image>
+             <view class="info">
+                <view class="info_content">{{item.goods_name}}</view>
+                <view class="price">￥{{item.goods_price}}</view>
+             </view>
+        </navigator>
+          
+    </view>
+</view>

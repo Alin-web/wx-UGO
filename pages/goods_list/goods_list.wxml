@@ -1,2 +1,5 @@
 <!--pages/goods_list/goods_list.wxml-->
-<text>pages/goods_list/goods_list.wxml</text>
+<view class="goosList">
+  <searchInput></searchInput>
+  <tab list="{{list}}" goodslist="{{goodslist}}"></tab>
+</view>

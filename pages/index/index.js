@@ -10,21 +10,11 @@ Page({
 
 	},
 	onLoad: function (options) {
-		/* wx.request({
-			url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
-			success: (result) => {
-				if (result.data.meta.status !== 200) {
-					return false
-				}
-				console.log(result);
-				this.setData({
-					swiperList:result
-				})
-			}
-		}); */
 		this.getlbt()
 		this.getCates()
 		this.getFloor()
+		
+		  
 	},
 	// 获得轮播图数据
 	async  getlbt(){

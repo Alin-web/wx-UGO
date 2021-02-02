@@ -1,0 +1,77 @@
+.cart{
+    width: 100%;
+    .delivery_address{
+        width: 100%;
+        padding: 20rpx;
+        border-bottom: 2rpx solid var(--Color);
+        button{
+            width: 60%;
+        }
+    }
+    .locationInfo{
+        padding: 20rpx 30rpx;
+        font-size: 30rpx;
+        border-bottom: 2rpx solid var(--Color);
+        .info1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .info2{
+            margin-top: 20rpx;
+        }
+    }
+    .content{
+        .tit{
+            height: 100rpx;
+            display: flex;
+            align-items: center;
+            font-size: 40rpx;
+            font-weight: 400;
+            border-bottom: 2rpx solid var(--Color);
+        }
+        .cartInfo{
+            border-bottom: 2rpx solid var(--Color);
+            width: 100%;
+            display: flex;
+            .imgInfo{
+                flex: 1;
+                height: 240rpx;
+                padding: 20rpx;
+            }
+            .describeInfo{
+                flex: 2;
+                padding: 40rpx 20rpx;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .name{
+                    overflow:hidden;   
+                    text-overflow:ellipsis;
+                    display:-webkit-box;
+                    -webkit-box-orient:vertical;
+                    -webkit-line-clamp:2; 
+                }
+                .foot{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 35rpx;
+                    .price{
+                        color: var(--Color);
+                    }
+                    .num{
+                        display: flex;
+                        .numChange{
+                            padding: 0 30rpx;
+                            height: 50rpx;
+                            line-height: 50rpx;
+                            border: 2rpx solid #ccc;
+                        }
+                        .numB{
+                            padding: 0 30rpx;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -17,3 +17,4 @@ page{
 .panding30{
     padding: 0 30rpx;
 }
+@import "./styles/iconfonts"

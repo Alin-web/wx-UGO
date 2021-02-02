@@ -1,2 +1,48 @@
 <!--pages/goods_detail/goods_detail.wxml-->
-<text>pages/goods_detail/goods_detail.wxml</text>
+<view class="goods_detail">
+  <swiper class="lb" indicator-dots indicator-active-color="#fff" autoplay interval="3000">
+    <swiper-item wx:for="{{goods_detail.pics}}" wx:key="pics_id" class="jump">
+      <image mode="widthFix" bindtap="ylClick" data-img="{{goods_detail.pics}}" data-index="{{index}}"  class="imgs" src="{{item.pics_mid}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 详情 -->
+  <view class="content">
+      <view class="content_price"> ￥ {{goods_detail.goods_price}}</view>
+      <view class="content_tit">
+        <view class="content_tit_left">{{goods_detail.goods_name}}</view>
+        <view class="content_tit_right">
+          <view class="iconfont icon-shoucang"></view>
+          <view>收藏</view>
+        </view>
+      </view>
+      <view class="detial">
+          <view class="tw">
+            图文详情
+          </view>
+          <rich-text class="" nodes="{{goods_detail.goods_introduce}}">
+            
+          </rich-text>
+            
+      </view>
+    </view>
+  <view class="tool">
+    <button  open-type="contact" size="mini"  class="kf">
+      <view class="iconfont icon-kefu"></view>
+      <view class="icon">联系客服</view>
+    </button>
+    <button open-type="share"  size="mini"  class="kf">
+      <view class="iconfont icon-fenxiang"></view>
+      <view class="icon">分享</view>
+    </button>
+    <button catchtap="jumpCart" size="mini"  class="kf">
+      <view class="iconfont icon-gouwuchekong"></view>
+      <view class="icon">购物车</view>
+    </button>
+    <button  size="mini"  catchtap="joincart" class="clcik join">
+      加入购物车
+    </button>
+    <button size="mini"  class="clcik buy">
+      立即购买
+    </button>
+  </view>
+</view>

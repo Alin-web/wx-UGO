@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "searchInput":"../../components/serach/search",
+    "tab":"../../components/tab/tab"
+  },
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh":true,
+  "backgroundColor": "#F8554D"
 }

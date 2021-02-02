@@ -2,23 +2,18 @@
 <view class="category">
     <searchInput></searchInput>
     <view class="content">
-        <!-- <view class="category_left">
-            <view bindtap="clcikItem" data-id="{{index}}" class="category_left_item" hover-class="active_class" wx:for="{{leftMenuList}}" wx:key="cat_id">
-                {{item.cat_name}}
-            </view>
-        </view> -->
         <scroll-view class="category_left" scroll-y >
             <view bindtap="clcikItem" data-id="{{index}}" class="{{clickId == index ? 'category_left_item active':'category_left_item'}}"  wx:for="{{leftMenuList}}" wx:key="cat_id">
                 {{item}}
             </view>
         </scroll-view>
         <scroll-view class="category_right,"  scroll-top="{{scrollTop}}" scroll-y >
-            <view class="category_right_item" wx:for="{{rightMenuList}}" wx:key="cat_id">
+            <view class="category_right_item" wx:for="{{rightMenuList}}" wx:key="cat_id"  >
                 <view class="category_right_item_tit">
                     / {{item.cat_name}} /
                 </view>
                 <view class="category_right_item_content">
-                    <navigator  class="items" wx:for-index="fIndex" wx:for-item="fItem"  wx:for="{{item.children}}" wx:key="cat_id">
+                    <navigator  class="items" wx:for-index="fIndex" wx:for-item="fItem"  url="../../pages/goods_list/goods_list?id={{fItem.cat_id}}"  wx:for="{{item.children}}" wx:key="cat_id">
                         <image class="item_img" src="{{fItem.cat_icon}}" mode="widthFix" />
                         <view>
                             {{fItem.cat_name}}

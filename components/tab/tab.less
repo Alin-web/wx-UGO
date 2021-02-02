@@ -1,0 +1,45 @@
+.tab{
+    width: 100%;
+    .tab_tit{
+        width: 100%;
+        height: 100rpx;
+        padding-bottom: 20rxp;
+        display: flex;
+        .tab_tit_item{
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+        }
+        .active{
+            color: var(--Color);
+            border-bottom: 1rpx solid var(--Color);
+        }
+    }
+    .tab_content{
+        width: 100%;
+        
+        .tab_content_item{
+            width: 100%;
+            height: 240rpx;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            display: flex;
+            .goodsImg{
+                width: 30%;
+                padding: 20rpx;
+            }
+            .info{
+                flex: 3;
+                padding: 20rpx;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .price{
+                    padding-bottom: 30rpx;
+                    color: var(--Color);
+                }
+            }
+        }
+    }
+}

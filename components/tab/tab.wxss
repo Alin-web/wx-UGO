@@ -1,0 +1,44 @@
+.tab {
+  width: 100%;
+}
+.tab .tab_tit {
+  width: 100%;
+  height: 100rpx;
+  padding-bottom: 20rxp;
+  display: flex;
+}
+.tab .tab_tit .tab_tit_item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.tab .tab_tit .active {
+  color: var(--Color);
+  border-bottom: 1rpx solid var(--Color);
+}
+.tab .tab_content {
+  width: 100%;
+}
+.tab .tab_content .tab_content_item {
+  width: 100%;
+  height: 240rpx;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  display: flex;
+}
+.tab .tab_content .tab_content_item .goodsImg {
+  width: 30%;
+  padding: 20rpx;
+}
+.tab .tab_content .tab_content_item .info {
+  flex: 3;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tab .tab_content .tab_content_item .info .price {
+  padding-bottom: 30rpx;
+  color: var(--Color);
+}

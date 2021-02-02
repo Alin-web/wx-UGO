@@ -1,1 +1,75 @@
-/* pages/cart/cart.wxss */
+.cart {
+  width: 100%;
+}
+.cart .delivery_address {
+  width: 100%;
+  padding: 20rpx;
+  border-bottom: 2rpx solid var(--Color);
+}
+.cart .delivery_address button {
+  width: 60%;
+}
+.cart .locationInfo {
+  padding: 20rpx 30rpx;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid var(--Color);
+}
+.cart .locationInfo .info1 {
+  display: flex;
+  justify-content: space-between;
+}
+.cart .locationInfo .info2 {
+  margin-top: 20rpx;
+}
+.cart .content .tit {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-size: 40rpx;
+  font-weight: 400;
+  border-bottom: 2rpx solid var(--Color);
+}
+.cart .content .cartInfo {
+  border-bottom: 2rpx solid var(--Color);
+  width: 100%;
+  display: flex;
+}
+.cart .content .cartInfo .imgInfo {
+  flex: 1;
+  height: 240rpx;
+  padding: 20rpx;
+}
+.cart .content .cartInfo .describeInfo {
+  flex: 2;
+  padding: 40rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart .content .cartInfo .describeInfo .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart .content .cartInfo .describeInfo .foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+}
+.cart .content .cartInfo .describeInfo .foot .price {
+  color: var(--Color);
+}
+.cart .content .cartInfo .describeInfo .foot .num {
+  display: flex;
+}
+.cart .content .cartInfo .describeInfo .foot .num .numChange {
+  padding: 0 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 2rpx solid #ccc;
+}
+.cart .content .cartInfo .describeInfo .foot .num .numB {
+  padding: 0 30rpx;
+}

@@ -77,5 +77,7 @@ Page({
 			scrollTop:0
 		})
 		this.getData(id)
-	}
+	},
+	// 点击商品跳转到商品列表页面
+	
 })
