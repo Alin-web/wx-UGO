@@ -1,9 +1,10 @@
 <!--pages/cart/cart.wxml-->
 <view class="cart">
+<!-- 收获地址按钮-->
    <view class="delivery_address" wx:if="{{isShowLocation}}">
     <button catchtap="address" plain="{{true}}" type="primary" > + 添加收获地址</button>
    </view>
-   
+   <!--详细收获地址  -->
    <view class="locationInfo" wx:if="{{isShowmyDetailInfo}}">
       <view class="info1">
          <view>收货人：{{myDetailInfo.name}}</view>
@@ -11,36 +12,42 @@
       </view>
       <view class="info2">收货地址：{{myDetailInfo.location}}</view>
    </view>
+   <!-- 内容 -->
    <view class="content ">
       <view class="tit panding30">购物车</view>
-      <!-- <navigator class="cartInfo panding30" url=" " wx:for="{{goodsList}}" wx:key="item.goods_id">
+      
+      <view class="cartInfo panding30" wx:for="{{goods}}" wx:key="id">
+         <checkbox catchtap="clickCheckbox" data-id="{{item.id}}" checked="{{item.isChoose}}" class="choose"></checkbox>
          <view class="imgInfo">
-            <image class="imgs"  src="{{item.pics[0].pics_sma}}"></image>
+            <image class="imgs"  src="{{item.img}}"></image>
          </view>
          <view class="describeInfo panding30">
             <view class="name">{{item.goods_name}}</view>
             <view class="foot">
-               <view class="price">￥ {{item.goods_price}}</view>
-               <view class="num"><input type="text">{{item.num}}</input></view>
-            </view>
-         </view>
-      </navigator> -->
-      <view class="cartInfo panding30">
-         <view class="imgInfo">
-            <image class="imgs"  src="http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000178667792_2_200x200.jpg"></image>
-         </view>
-         <view class="describeInfo panding30">
-            <view class="name">海信(Hisense)LED50MU8600UC 50英寸 4K超高清智能电视 HDR超薄曲面"</view>
-            <view class="foot">
-               <view class="price">￥ 1900</view>
+               <view class="price">￥{{item.price}}</view>
                <view class="num">
-                  <view class="numChange" catchtap="add">+</view>
-                  <view class="numB"> {{num}} </view>
-                  <view class="numChange" catchtap="subtract">-</view>
+                  <view class="numChange" catchtap="add" data-id="{{item.id}}">+</view>
+                  <view class="numB"> {{item.num}} </view>
+                  <view class="numChange" catchtap="subtract" data-id="{{item.id}}">-</view>
                </view>
             </view>
          </view>
       </view>
    </view>
-     
+   <!-- 合计 -->
+   <view class="cartfoot">
+         <view class="allChoose">
+            <checkbox catchtap="allChoose" data-isBool="{{obj.allChoose}}" checked="{{obj.allChoose}}"></checkbox>
+            <text>全选</text>
+         </view>
+         <view class="totalPrice">
+            <view>
+               合计:<text class="price">￥{{obj.price}}</text>
+            </view>
+            <view>包含运费</view>
+         </view>
+         <view class="settle" catchtap="jumpPay">
+            结算({{obj.goods_num}})
+         </view>
+   </view>
 </view>

@@ -1,2 +1,5 @@
 <!--pages/user/user.wxml-->
 <text>pages/user/user.wxml</text>
+<view wx:for="{{list}}">
+{{item}}{{index}}
+</view>

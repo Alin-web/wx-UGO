@@ -1,6 +1,7 @@
 // pages/goods_list/goods_list.js
 import {request } from "../../request/index.js"
 import regeneratorRuntime from '../../lib/runtime/runtime.js'
+
 Page({
   data: {
       list:[
@@ -30,12 +31,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(options);
     this.downId = {'query':' ','cid':options.id,'pagenum':1,'pagesize':10}
     this.getGoods(this.downId)
   },
   async getGoods(query){
     const res = await request({ url:"/goods/search",data:query})
+    console.log(res);
     this.list = res
     this.num =  Math.ceil(this.list.total/this.list.goods.length)
     

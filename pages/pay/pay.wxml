@@ -1,2 +1,44 @@
 <!--pages/pay/pay.wxml-->
-<text>pages/pay/pay.wxml</text>
+<view class="pay">
+   <!--详细收获地址  -->
+   <view class="locationInfo">
+      <view class="info1">
+         <view>收货人：{{myDetailInfo.name}}</view>
+         <view>电话：{{myDetailInfo.iphon}}</view>
+      </view>
+      <view class="info2">收货地址：{{myDetailInfo.location}}</view>
+   </view>
+   <!-- 内容 -->
+   <view class="content ">
+      <view class="tit panding30">购物车</view>
+      <view class="cartInfo panding30" wx:for="{{goods}}" wx:key="id">
+         <view class="imgInfo">
+            <image class="imgs"  src="{{item.img}}"></image>
+         </view>
+         <view class="describeInfo panding30">
+            <view class="name">{{item.goods_name}}</view>
+            <view class="foot">
+               <view class="price">￥{{item.price}}</view>
+               <view class="num">
+                  <view class="numB"> ×{{item.num}} </view>
+               </view>
+            </view>
+         </view>
+      </view>
+   </view>
+   <!-- 合计 -->
+   <view class="cartfoot">
+         <view class="allChoose">
+         </view>
+         <view class="totalPrice">
+            <view>
+               合计:<text class="price">￥{{obj.price}}</text>
+            </view>
+            <view>包含运费</view>
+         </view>
+         <view class="settle" catchtap="jumpPay">
+            支付({{obj.goods_num}})
+         </view>
+   </view>
+     
+</view>

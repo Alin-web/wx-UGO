@@ -1,2 +1,5 @@
 <!--pages/auth/auth.wxml-->
-<text>pages/auth/auth.wxml</text>
+<view class="auth">
+  <!-- bindgetuserinfo 获取用户信息 -->
+  <button class="but" type="primary" plain open-type="getUserInfo" bindgetuserinfo="power">授权</button>
+</view>

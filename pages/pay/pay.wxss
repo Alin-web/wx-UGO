@@ -1,1 +1,99 @@
-/* pages/pay/pay.wxss */
+.pay {
+  width: 100%;
+}
+.pay .locationInfo {
+  padding: 20rpx 30rpx;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid var(--Color);
+}
+.pay .locationInfo .info1 {
+  display: flex;
+  justify-content: space-between;
+}
+.pay .locationInfo .info2 {
+  margin-top: 20rpx;
+}
+.pay .content .tit {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-size: 40rpx;
+  font-weight: 400;
+  border-bottom: 2rpx solid var(--Color);
+}
+.pay .content .cartInfo {
+  border-bottom: 2rpx solid var(--Color);
+  width: 100%;
+  display: flex;
+}
+.pay .content .cartInfo .imgInfo {
+  flex: 1;
+  height: 240rpx;
+  padding: 20rpx;
+}
+.pay .content .cartInfo .describeInfo {
+  flex: 2;
+  padding: 40rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pay .content .cartInfo .describeInfo .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.pay .content .cartInfo .describeInfo .foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+}
+.pay .content .cartInfo .describeInfo .foot .price {
+  color: var(--Color);
+}
+.pay .content .cartInfo .describeInfo .foot .num {
+  display: flex;
+}
+.pay .content .cartInfo .describeInfo .foot .num .numB {
+  padding: 0 30rpx;
+}
+.pay .cartfoot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  border: 2rpx solid #ccc;
+  background-color: #fff;
+}
+.pay .cartfoot .allChoose {
+  flex: 1;
+}
+.pay .cartfoot .totalPrice {
+  padding-top: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pay .cartfoot .totalPrice view:nth-child(1) {
+  font-size: 35rpx;
+}
+.pay .cartfoot .totalPrice view:nth-child(1) .price {
+  color: red;
+}
+.pay .cartfoot .totalPrice view:nth-child(2) {
+  padding-left: 80rpx;
+  font-size: 20rpx;
+  color: #ccc;
+}
+.pay .cartfoot .settle {
+  line-height: 100rpx;
+  flex: 1;
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+  background-color: red;
+}

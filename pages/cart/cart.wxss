@@ -34,6 +34,9 @@
   width: 100%;
   display: flex;
 }
+.cart .content .cartInfo .choose {
+  display: flex;
+}
 .cart .content .cartInfo .imgInfo {
   flex: 1;
   height: 240rpx;
@@ -72,4 +75,45 @@
 }
 .cart .content .cartInfo .describeInfo .foot .num .numB {
   padding: 0 30rpx;
+}
+.cart .cartfoot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  border: 2rpx solid #ccc;
+  background-color: #fff;
+}
+.cart .cartfoot .allChoose {
+  line-height: 100rpx;
+  flex: 1;
+  font-size: 30rpx;
+  padding-left: 50rpx;
+}
+.cart .cartfoot .totalPrice {
+  padding-top: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart .cartfoot .totalPrice view:nth-child(1) {
+  font-size: 35rpx;
+}
+.cart .cartfoot .totalPrice view:nth-child(1) .price {
+  color: red;
+}
+.cart .cartfoot .totalPrice view:nth-child(2) {
+  padding-left: 80rpx;
+  font-size: 20rpx;
+  color: #ccc;
+}
+.cart .cartfoot .settle {
+  line-height: 100rpx;
+  flex: 1;
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+  background-color: red;
 }
