@@ -1,1 +1,119 @@
-/* pages/user/user.wxss */
+.user {
+  width: 100%;
+}
+.user .head {
+  width: 100%;
+  height: 500rpx;
+  position: relative;
+}
+.user .head .bgcImg {
+  width: 100%;
+  height: 95%;
+  filter: blur(12rpx);
+}
+.user .head .contentBox {
+  width: 25%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.user .head .contentBox .img {
+  width: 100%;
+  height: 50%;
+}
+.user .head .contentBox .img .imgs {
+  width: 100%;
+  border-radius: 50%;
+}
+.user .head .contentBox .name {
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+}
+.user .content {
+  width: 100%;
+  padding-bottom: 20rpx;
+  background-color: #EBECE9;
+}
+.user .content .content_my {
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  transform: translate(0, -50%);
+  display: flex;
+}
+.user .content .content_my .item {
+  padding: 20rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.user .content .content_my .item .num {
+  color: var(--Color);
+}
+.user .content .order_my {
+  width: 100%;
+  height: 170rpx;
+  background-color: #fff;
+  margin-top: 40rpx;
+  transform: translate(0, -50%);
+}
+.user .content .order_my .tit {
+  padding: 20rpx;
+  height: 30%;
+  font-size: 35rpx;
+  line-height: 40rpx;
+  font-weight: 600;
+}
+.user .content .order_my .content {
+  margin-top: 20rpx;
+  border-top: 6rpx solid #EBECE9;
+  background-color: #fff;
+  width: 100%;
+  height: 70%;
+  padding: 10rpx 0;
+  display: flex;
+  text-align: center;
+}
+.user .content .order_my .content .item {
+  flex: 1;
+  margin-top: 10rpx;
+  color: var(--Color);
+}
+.user .content .order_my .content .item .icon {
+  font-size: 45rpx;
+}
+.user .content .order_my .content .item .text {
+  margin-top: 5rpx;
+  color: #000;
+}
+.user .content .Harvest_address {
+  width: 100%;
+  height: 100rpx;
+  margin-top: -40rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+}
+.user .content .other {
+  width: 100%;
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.user .content .other .item {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 6rpx solid #EBECE9;
+}

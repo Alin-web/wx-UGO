@@ -1,0 +1,25 @@
+<!--components/orders/orders.wxml-->
+<view class="orders">
+  <view class="tab">
+    <view class='tab-item {{index == 1 ? "clickTab":" "}}'  catchtap="clickTab">全部</view>
+    <view class='tab-item {{index == 2 ? "clickTab":" "}}'>待付款</view>
+    <view class='tab-item {{index == 3 ? "clickTab":" "}}'>待发货</view>
+    <view class='tab-item {{index == 4 ? "clickTab":" "}}'>退款</view>
+  </view>
+  <view class="content">
+    <view class="detail" wx:for="{{orders}}" wx:key="order_id">
+      <view class="order_num panding30">
+        <view class="tit">订单编号</view>
+        <view class="cont">{{item.order_number}}</view>
+      </view>
+      <view class="price">
+        <view class="tit">订单价格</view>
+        <view class="cont">￥{{item.order_price}}</view>
+      </view>
+      <view class="date">
+        <view class="tit">订单日期</view>
+        <view class="cont">{{item.create_time}}</view>
+      </view>
+    </view>
+  </view>
+</view>

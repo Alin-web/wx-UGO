@@ -4,7 +4,7 @@ Page({
   data:{
 
   },
- 
+
   power(e){
     // 用户信息
     const {encryptedData,rawData,iv,signature} = e.detail
@@ -17,7 +17,7 @@ Page({
       const params = {encryptedData,rawData,iv,signature,code}
       /* https://api-hmugo-web.itheima.net/api/public/v1/users/wxlogin */
       // 发送请求
-      const res = await request ({url:'https://api-hmugo-web.itheima.net/api/public/v1/users/wxlogin',data:params,method:'post'})
+      const res = await request ({url:'/users/wxlogin',data:params,method:'post'})
       console.log(res);
       // 账号无权限自定义token值
       },

@@ -104,6 +104,12 @@
         {
           "name": "用户",
           "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单页面",
+          "pathName": "pages/order/order",
           "scene": null
         }
       ]

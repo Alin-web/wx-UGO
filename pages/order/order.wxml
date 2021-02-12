@@ -1,4 +1,4 @@
 <!--pages/order/order.wxml-->
-<view>
-  我是订单页面
+<view class="order">
+  <Ordres class="orders" orders="{{orders}}" index="{{index}}"></Ordres>
 </view>

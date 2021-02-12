@@ -1,1 +1,6 @@
-/* pages/order/order.wxss */
+.order {
+  width: 100%;
+}
+.order .orders {
+  width: 100%;
+}

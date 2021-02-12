@@ -1,0 +1,46 @@
+.orders {
+  width: 100%;
+}
+.orders .tab {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  line-height: 100rpx;
+  height: 100rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.orders .tab .tab-item {
+  font-size: 35rpx;
+  font-weight: 500;
+  flex: 1;
+}
+.orders .tab .clickTab {
+  border-bottom: 2rpx solid var(--Color);
+  color: var(--Color);
+}
+.orders .content {
+  width: 100%;
+}
+.orders .content .detail {
+  width: 100%;
+  padding: 30rpx 30rpx 0 30rpx;
+  border-bottom: 2rpx solid #ccc;
+  font-size: 33rpx;
+}
+.orders .content .detail .order_num {
+  display: flex;
+  justify-content: space-between;
+}
+.orders .content .detail .price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rpx;
+}
+.orders .content .detail .price .cont {
+  color: var(--Color);
+}
+.orders .content .detail .date {
+  display: flex;
+  justify-content: space-between;
+  margin: 15rpx 0;
+}
